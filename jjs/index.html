@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!--- BOX ICONS -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Import TailwindCSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!--- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Jajan Solo</title>
+    <style>
+        #LiffAppContent {
+            max-width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--- SCROLL TOP -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop__icon'></i>
+    </a>
+
+    <!--- HEADER -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">JaJan Solo</a>
+
+            <button type="button" id="line-login" class="btn visible" onclick="handleLogin()">Login</button>
+            <div id="account">
+                <img src="" alt="">
+                <ul class="blank">
+                    <li id="line-logout" onclick="handleLogout()">Log Out</li>
+                </ul>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
+                    <div class="cart__icon">
+                        <li class="item__total nav__item bx bx-cart-alt "> <span>cart</span></li>
+                        </span>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="1-main">
+        <!--- HOME -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">JaJan Solo</h1>
+                    <h2 class="home__subtitle">Pesan makanan ciri khas <br> kota Solo.</h2>
+                    <a href="#menu" class="button">Lihat Menu</a>
+                </div>
+
+                <img src="images/home.jpg" alt="" class="home__img">
+            </div>
+        </section>
+
+        <section class="login-wrapper blank">
+            <h1></h1>
+            <p></p>
+            <button id="first-login" class="btn" onclick="handleLogin()">Login</button>
+        </section>
+
+        <h1 class="greeting"></h1>
+        <section id="wrapper">
+            <article id='right-wrapper'>
+                <div class="line-status">
+                    <h1>LINE Status</h1>
+                    <ul>
+                        <li id="isClient">App Line: </li>
+                        <li id="isLogin">Is Login: </li>
+                    </ul>
+                    <p id="status-client"></p>
+                </div>
+                <div id="control-client"></div>
+                <div id="order-status"></div>
+            </article>
+        </section>
+
+        <!-- Products -->
+        <section class="products menu section bd-container" id="menu">
+            <span class="section-subtitle">Menu</span>
+            <div class="product__center">
+            </div>
+        </section>
+
+        <section class="cart__overlay">
+            <div class="cart">
+                <span class="close__cart">
+        <svg>
+          <use xlink:href="images/sprite.svg#icon-cross"></use>
+        </svg>
+      </span>
+                <h1>List Orderan</h1>
+                <div class="cart__centent">
+                </div>
+
+                <div class="cart__footer">
+                    <h3>Total: Rp. <span class="cart__total">0</span></h3>
+                    <button class="clear__cart btn">Bersihkan</button>
+                    <button class="sendMessage__cart btn">Send Message</button>
+                </div>
+            </div>
+        </section>
+
+        <!--- CONTACT US -->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact__container bd-grid">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Mari Memesan</span>
+                    <h2 class="section-title contact__initial">Hubungi Saya</h2>
+                    <p class="contact__description">Jika anda menginginkan pemesanan dalam jumlah banyak, Silahkan klik tombol nya Yaa. Trimakasih Foodie.</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="https://api.whatsapp.com/send/?phone=6285223404554&text&app_absent=0" class="button">Hubungi sekarang</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--- FOOTER -->
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">JaJanSolo</a>
+                <span class="footer__description">Online store</span>
+                <div>
+                    <a href="https://www.facebook.com/Nova Ramadika" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/05_novaaa" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a class="footer__social"><i class='bx bxl-twitter'></i></a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Services</h3>
+                <ul>
+                    <li>Delivery</li>
+                    <li>Pricing</li>
+                    <li>Fast food</li>
+                    <li>Reserve your spot</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Informasi</h3>
+                <ul>
+                    <li>Event</li>
+                    <li>Contact us</li>
+                    <li>Privacy police</li>
+                    <li>Terms of services</li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Alamat</h3>
+                <ul>
+                    <li>Nayu</li>
+                    <li>Jl. Kelud barat</li>
+                    <li>1010 - 999 - 777</li>
+                    <li>novarama0@email.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2020 NovaR JaJanSolo. All right reserved</p>
+    </footer>
+
+    <script type="text/javascript">
+        /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+        const sections = document.querySelectorAll('section[id]')
+
+        function scrollActive() {
+            const scrollY = window.pageYOffset
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 50;
+                sectionId = current.getAttribute('id')
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+                } else {
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+                }
+            })
+        }
+        window.addEventListener('scroll', scrollActive)
+
+        /*==================== CHANGE BACKGROUND HEADER ====================*/
+        function scrollHeader() {
+            const nav = document.getElementById('header')
+                // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+            if (this.scrollY >= 200) nav.classList.add('scroll-header');
+            else nav.classList.remove('scroll-header')
+        }
+        window.addEventListener('scroll', scrollHeader)
+
+        /*==================== SHOW SCROLL TOP ====================*/
+        function scrollTop() {
+            const scrollTop = document.getElementById('scroll-top');
+            // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+            if (this.scrollY >= 560) scrollTop.classList.add('show-scroll');
+            else scrollTop.classList.remove('show-scroll')
+        }
+        window.addEventListener('scroll', scrollTop)
+
+        /*==================== DARK LIGHT THEME ====================*/
+        const themeButton = document.getElementById('theme-button')
+        const darkTheme = 'dark-theme'
+        const iconTheme = 'bx-sun'
+
+        // Previously selected topic (if user selected)
+        const selectedTheme = localStorage.getItem('selected-theme')
+        const selectedIcon = localStorage.getItem('selected-icon')
+
+        // We obtain the current theme that the interface has by validating the dark-theme class
+        const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+
+        // We validate if the user previously chose a topic
+        if (selectedTheme) {
+            // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+            themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+        }
+
+        // Activate / deactivate the theme manually with the button
+        themeButton.addEventListener('click', () => {
+            // Add or remove the dark / icon theme
+            document.body.classList.toggle(darkTheme)
+            themeButton.classList.toggle(iconTheme)
+                // We save the theme and the current icon that the user chose
+            localStorage.setItem('selected-theme', getCurrentTheme())
+            localStorage.setItem('selected-icon', getCurrentIcon())
+        })
+
+        /*==================== SCROLL REVEAL ANIMATION ====================*/
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '30px',
+            duration: 2000,
+            reset: true
+        });
+
+        sr.reveal(`.home__data, .home__img,
+            .about__data, .about__img,
+            .services__content, .menu__content,
+            .app__data, .app__img,
+            .contact__data, .contact__button,
+            .footer__content`, {
+            interval: 200
+        })
+    </script>
+
+    <script type="text/javascript">
+        /*==================== SHOW MENU ====================*/
+        const showMenu = (toggleId, navId) => {
+            const toggle = document.getElementById(toggleId),
+                nav = document.getElementById(navId)
+
+            // Validate that variables exist
+            if (toggle && nav) {
+                toggle.addEventListener('click', () => {
+                    // We add the show-menu class to the div tag with the nav__menu class
+                    nav.classList.toggle('show-menu')
+                })
+            }
+        }
+        showMenu('nav-toggle', 'nav-menu')
+
+        /*==================== REMOVE MENU MOBILE ====================*/
+        const navLink = document.querySelectorAll('.nav__link')
+
+        function linkAction() {
+            const navMenu = document.getElementById('nav-menu')
+                // When we click on each nav__link, we remove the show-menu class
+            navMenu.classList.remove('show-menu')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+
+        if (document.readyState == 'loading') {
+            document.addEventListener('DOMContentLoaded', ready)
+        } else {
+            ready()
+        }
+    </script>
+    <!--- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="liff-stater.js"></script>
+
+
+    <script src="app.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+
+
+
+</body>
+
+</html>

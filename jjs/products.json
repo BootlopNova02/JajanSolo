@@ -1,0 +1,72 @@
+{
+    "status": "success",
+    "items": [{
+            "id": 1,
+            "title": "Nasi Liwet",
+            "price": 25000,
+            "image": "images/nasi-liwet.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Gudeg",
+            "price": 22000,
+            "image": "images/gudeg.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Tengkleng",
+            "price": 25000,
+            "image": "images/tengkleng.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Sate Kere",
+            "price": 18000,
+            "image": "images/sate-kere.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Selat",
+            "price": 16000,
+            "image": "images/selat.jpeg"
+
+        },
+        {
+            "id": 6,
+            "title": "Timlo",
+            "price": 16000,
+            "image": "images/timlo.jpg"
+
+        },
+        {
+            "id": 7,
+            "title": "Toprak",
+            "price": 16000,
+            "image": "images/toprak.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Es Kelapa Muda",
+            "price": 8000,
+            "image": "images/es-kelapa-muda.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Lemon Tea",
+            "price": 5000,
+            "image": "images/lemon-tea.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Es Teh",
+            "price": 4000,
+            "image": "images/es-teh.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Es Jeruk",
+            "price": 5000,
+            "image": "images/es-jeruk.jpg"
+        }
+    ]
+}
